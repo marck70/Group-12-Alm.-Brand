@@ -48,8 +48,42 @@
 
         </div>
     </section>
+    <!-- SLIDER -->
+    <center>
+        <div id="container_slider">
+            <p> <span id="demo"></span> kr </p>
+            <input type="range" min="5000" max="100000" step="200" class="Slider" id="Ranger">
 
 
+    </center>
+
+    <!----- JavaScript ----->
+    <script>
+        document.querySelector(".Slider").addEventListener("input", showValue);
+
+
+        function showValue() {
+
+
+
+            console.log(this.value);
+
+
+        }
+
+
+        var slider = document.getElementById("Ranger");
+        var output = document.getElementById("demo");
+
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="javaScript.js"></script>
 
 
 
